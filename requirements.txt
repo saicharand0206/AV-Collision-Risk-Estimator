@@ -1,0 +1,24 @@
+# ═══════════════════════════════════════════════════════════════
+# MT310 AV Collision Risk Estimator — requirements.txt
+# Fixed for HF Spaces Python 3.13 + build timeout fix
+# KEY CHANGES vs v1:
+#   - Removed exact pins (==) → use >= for flexible wheel resolution
+#   - numpy>=2.0.0 (numpy 1.x has NO Python 3.13 wheels → build fails)
+#   - Removed scipy (unused → was causing install size/time bloat)
+#   - opencv-python-headless (no GUI deps → faster install)
+# ═══════════════════════════════════════════════════════════════
+
+# ── UI Framework ─────────────────────────────────────────────
+gradio>=4.29.0
+
+# ── Data & ML ────────────────────────────────────────────────
+numpy>=2.0.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# ── Visualization ────────────────────────────────────────────
+matplotlib>=3.8.0
+Pillow>=10.0.0
+
+# ── Computer Vision ──────────────────────────────────────────
+opencv-python-headless>=4.9.0.80
